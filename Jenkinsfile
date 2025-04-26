@@ -19,7 +19,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 echo 'Running Docker container...'
-                sh 'docker run -d -p 5000:5000 my-flask-app'
+                sh 'docker run -d -p 6000:6000 my-flask-app'
             }
         }
     }
