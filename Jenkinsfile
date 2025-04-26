@@ -12,14 +12,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh 'docker build -t PipelineCheckDocker .'
+                sh 'docker build -t pipeline-check-docker .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
                 echo 'Running Docker container...'
-                sh 'docker run -d -p 6000:6000 PipelineCheckDocker'
+                sh 'docker run -d -p 6000:6000 pipeline-check-docker'
             }
         }
     }
